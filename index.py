@@ -1,6 +1,7 @@
+from botocore.vendored import requests
 import json
 import datetime
-import requests
+
 
 
 def handler(event, context):
