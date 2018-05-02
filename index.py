@@ -20,9 +20,7 @@ def handler(event, context):
     statement = 'select * from developer'
     cur.execute(statement)
     result = cur.fetchall()
-    output = result.json()
-    print result
     cnx.close()
     return {'statusCode': 200,
-            'body': json.dumps(output),
+            'body': json.dumps(result),
             'headers': {'Content-Type': 'application/json'}}
